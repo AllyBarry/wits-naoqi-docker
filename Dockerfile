@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 ARG PYTHON_VERSION=2.7
-ARG USER=nao
+ENV HOME=/home/user
 
 # Install dependencies
 RUN apt-get update && apt-get install -y iproute2 telnet iputils-ping \
@@ -43,9 +43,7 @@ RUN apt-get update && apt-get install -y fontconfig libsdl2-dev libxaw7 libqt5gu
     && apt-get clean
 
 # Add Choreograph files (to be installed manually)
-ADD choregraphe-suite-2.5.10.7-linux64-setup.run /home/${USER}/choregraphe
+ADD choregraphe-suite-2.5.10.7-linux64-setup.run /choregraphe/
 
 # Copy the samples folder
-ADD ./samples /home/${USER}/naoqi/samples
-
-WORKDIR /home/${USER}
+ADD ./samples /home/user/naoqi/samples

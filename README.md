@@ -71,19 +71,28 @@ xhost -local:docker
 
 
 ## Software Setup
-From within the interactive container, the installation can be completed with the following instructions.
+From within the interactive container, the installation can be completed with the following steps.
 
 ### Choregraphe Installation
-1. Run the installation wizard:
+1. You can run the installation wizard using:
    ```bash
-   # From the home directory: /home/nao/
-   ./choregraphe/choregraphe-suite-2.5.10.7-linux64-setup.run
+   /choregraphe/choregraphe-suite-2.5.10.7-linux64-setup.run
    ```
-2. Follow the wizard prompts
-3. Install to `/home/nao/choregraphe`
-4. Enter the license key when prompted
-5. If the installation is successful, the Choregraphe GUI should open.
-6. Connect to Pepper using the connection icon and its IP address
+   or use the simplified command:
+   ```bash
+   /choregraphe/choregraphe-suite-2.5.10.7-linux64-setup.run --mode unattended --installdir /home/user/choregraphe/
+   ```
+3. Enter the license key when prompted
+4. If the installation is successful, the Choregraphe GUI should open.
+5. Connect to Pepper using the connection icon and its IP address
+
+To re-launch the program at any point:
+```bash
+# {Installation directory}/choregraphe
+# E.g., from /home/user
+./choregraphe/choregraphe
+```
+If you used the installation and Quick mode, the installation directory will likely be: `/opt/Softbank Robotics/Choregraphe Suite 2.5`.
 
 ### Python SDK Testing
 Test the SDK installation:
@@ -122,7 +131,7 @@ say "How are you?"
 ### Choregraphe GUI
 1. Connect to Pepper in the Choregraphe GUI
 2. Locate the 'Robot applications' section
-3. Trigger pre-loaded behaviors or import samples from `/home/nao/naoqi/samples`
+3. Trigger pre-loaded behaviors or import samples from `/home/user/naoqi/samples`
 
 ## Development Workflow
 
