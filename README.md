@@ -44,7 +44,7 @@ Do not edit this.
 Clone this repository and navigate to the directory.
 
 ### 2. Download Installation Files
-Obtain these files from the RAIL Lab:
+Obtain these files from the RAIL Lab and place them in the root of the directory:
 - `choregraphe-suite-2.5.10.7-linux64-setup.run`
 - `pynaoqi-python2.7-2.8.6.23-linux64.tar.gz`
 
@@ -76,7 +76,7 @@ From within the interactive container, the installation can be completed with th
 ### Choregraphe Installation
 1. Run the installation wizard:
    ```bash
-   # From /home/nao/choregraph
+   # From the home directory: /home/nao/
    ./choregraphe/choregraphe-suite-2.5.10.7-linux64-setup.run
    ```
 2. Follow the wizard prompts
@@ -120,8 +120,8 @@ say "How are you?"
 ```
 
 ### Choregraphe GUI
-1. Connect to Pepper in the Choregraphe interface
-2. Access 'Robot applications' section
+1. Connect to Pepper in the Choregraphe GUI
+2. Locate the 'Robot applications' section
 3. Trigger pre-loaded behaviors or import samples from `/home/nao/naoqi/samples`
 
 ## Development Workflow
